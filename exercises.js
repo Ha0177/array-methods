@@ -27,9 +27,7 @@ function filterRange(arr, a, b) {
 
 
 // Write a function filterRangeInPlace(arr, a, b) that gets an array arr and removes from it all values except those that are between a and b. The test is: a ≤ arr[i] ≤ b.
-let arr = [5, 3, 8, 1];
 
-console.log(filterRangeInPlace(arr, 1, 4)); // removed the numbers except from 1 to 4
 
 function filterRangeInPlace(arr, a, b) {
     for (let i = 0; i < arr.length; i++) {
@@ -41,3 +39,19 @@ function filterRangeInPlace(arr, a, b) {
     }
 }
 
+// Sort in decreasing order
+
+let arr = [5, 2, 1, -10, 8];
+
+arr.sort(function(a, b) {
+    return b - a; 
+});
+
+// Copy and sort array
+
+function copySorted(array) {
+    return array.slice().sort(function(a, b) {
+        return a.localeCompare(b);
+    });
+    
+}
