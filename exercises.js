@@ -64,3 +64,12 @@ function shuffle(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
+
+// Filter unique array members
+
+function unique(arr) {
+    return arr.filter(function(element, index, arr) {
+        return arr.indexOf(element) === index;
+    });
+    
+}
