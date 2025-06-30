@@ -104,17 +104,35 @@ function unique(arr) {
 // Sort users by age
 // Write the function sortByAge(users) that gets an array of objects with the age property and sorts them by age.
 
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 28 };
+
+// let arr = [ pete, john, mary ];
+
+// function sortByAge(users) {
+//     users.sort((a, b) => {
+//         return a.age - b.age;
+//     });
+//     return users;
+// };
+
+
+// Get average age
+
+// Write the function getAverageAge(users) that gets an array of objects with property age and returns the average age.
+
+// The formula for the average is (age1 + age2 + ... + ageN) / N.
+
 let john = { name: "John", age: 25 };
 let pete = { name: "Pete", age: 30 };
-let mary = { name: "Mary", age: 28 };
+let mary = { name: "Mary", age: 29 };
 
-let arr = [ pete, john, mary ];
+let arr = [ john, pete, mary ];
 
-function sortByAge(users) {
-    users.sort((a, b) => {
-        return a.age - b.age;
-    });
-    return users;
+function getAverageAge(users) {
+    let sum = users.reduce((sum, user) => {
+        return sum + user.age;
+    }, 0);
+    return sum / users.length;
 };
-
-console.log(sortByAge(arr));
