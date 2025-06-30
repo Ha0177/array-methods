@@ -76,11 +76,27 @@ function unique(arr) {
 
 // You have an array of user objects, each one has user.name. Write the code that converts it into an array of names.
 
-let john = { name: "John", age: 25 };
-let pete = { name: "Pete", age: 30 };
-let mary = { name: "Mary", age: 28 };
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 28 };
+
+// let users = [ john, pete, mary ];
+
+// let names = users.map((user => user.name));
+
+
+// Map to objects
+// You have an array of user objects, each one has name, surname and id.
+
+// Write the code to create another array from it, of objects with id and fullName, where fullName is generated from name and surname.
+
+let john = { name: "John", surname: "Smith", id: 1 };
+let pete = { name: "Pete", surname: "Hunt", id: 2 };
+let mary = { name: "Mary", surname: "Key", id: 3 };
 
 let users = [ john, pete, mary ];
 
-let names = users.map((user => user.name));
-console.log(names);
+let usersMapped = users.map(user => ({
+    id: user.id,
+    fullName : user.name + " " + user.surname,
+}));
