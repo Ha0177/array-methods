@@ -41,11 +41,11 @@ function filterRangeInPlace(arr, a, b) {
 
 // Sort in decreasing order
 
-let arr = [5, 2, 1, -10, 8];
+// let arr = [5, 2, 1, -10, 8];
 
-arr.sort(function(a, b) {
-    return b - a; 
-});
+// arr.sort(function(a, b) {
+//     return b - a; 
+// });
 
 // Copy and sort array
 
@@ -90,13 +90,31 @@ function unique(arr) {
 
 // Write the code to create another array from it, of objects with id and fullName, where fullName is generated from name and surname.
 
-let john = { name: "John", surname: "Smith", id: 1 };
-let pete = { name: "Pete", surname: "Hunt", id: 2 };
-let mary = { name: "Mary", surname: "Key", id: 3 };
+// let john = { name: "John", surname: "Smith", id: 1 };
+// let pete = { name: "Pete", surname: "Hunt", id: 2 };
+// let mary = { name: "Mary", surname: "Key", id: 3 };
 
-let users = [ john, pete, mary ];
+// let users = [ john, pete, mary ];
 
-let usersMapped = users.map(user => ({
-    id: user.id,
-    fullName : user.name + " " + user.surname,
-}));
+// let usersMapped = users.map(user => ({
+//     id: user.id,
+//     fullName : user.name + " " + user.surname,
+// }));
+
+// Sort users by age
+// Write the function sortByAge(users) that gets an array of objects with the age property and sorts them by age.
+
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+
+let arr = [ pete, john, mary ];
+
+function sortByAge(users) {
+    users.sort((a, b) => {
+        return a.age - b.age;
+    });
+    return users;
+};
+
+console.log(sortByAge(arr));
